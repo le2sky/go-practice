@@ -18,6 +18,10 @@
 //4. function
 // 아래 주석 확인
 
+
+//5. loop
+// go는 for만 사용 가능
+
 package main
 
 import (
@@ -26,6 +30,14 @@ import (
 	"strings"
 )
 
+
+
+func superAdd(numbers ...int) (result int) {
+  for _,v := range numbers {
+    result+=v
+  }
+  return
+}
 
 // Naked return + defer 특이함;
 func lenAndUpperNaked(name string) (length int, uppercase string){
@@ -42,24 +54,27 @@ func mult(a ,b int) int{
 
 //다중 리턴 특이하다.
 func lenAndUpper(name string) (int, string){
-  return len(name), strings.ToUpper(name);
+  return len(name), strings.ToUpper(name)
 }
 
 //js rest이랑 비슷함 타입은 지정한 놈의 배열
 func repeatMe(words ...string){
-  fmt.Println(words);
+  fmt.Println(words)
 }
 
 func main() {
 	fmt.Println("Hello, World!")
-  fmt.Println(mult(3, 3));
+  fmt.Println(mult(3, 3))
 
-  totalLength, upperName := lenAndUpper("leesky");
-  fmt.Println(totalLength, upperName);
+  totalLength, upperName := lenAndUpper("leesky")
+  fmt.Println(totalLength, upperName)
 
-  repeatMe("lee", "sky", "study", "go");
+  repeatMe("lee", "sky", "study", "go")
 
+
+  total := superAdd(1,2,3,4,5)
+  fmt.Println(total)
 
   something.SayHello()
-  const name string = "leesky";
+  const name string = "leesky"
 }
