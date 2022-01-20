@@ -13,18 +13,53 @@
 // 변수 : var name type = ""
 //   -> name:="leesky" <= 동적 타입언어처럼 타입을 지정해준다.
 //   -> 위와 같은 축약 선언은 함수내부에서만 작동가능
-//   -> 변수에만 적용가능하다
+//   -> 변수에만 적용가능하다 (주의: 선언이라는 개념임)
+
+//4. function
+// 아래 주석 확인
+
 package main
 
 import (
 	"fmt"
 	"main/something"
+	"strings"
 )
+
+
+// Naked return + defer 특이함;
+func lenAndUpperNaked(name string) (length int, uppercase string){
+  defer fmt.Println("done")
+  length = len(name)
+  uppercase = strings.ToUpper(name);
+  return 
+}
+
+// 뒤에 꺼만 하면 앞에는 뒤에 따라감!
+func mult(a ,b int) int{
+  return a * b
+}
+
+//다중 리턴 특이하다.
+func lenAndUpper(name string) (int, string){
+  return len(name), strings.ToUpper(name);
+}
+
+//js rest이랑 비슷함 타입은 지정한 놈의 배열
+func repeatMe(words ...string){
+  fmt.Println(words);
+}
 
 func main() {
 	fmt.Println("Hello, World!")
+  fmt.Println(mult(3, 3));
+
+  totalLength, upperName := lenAndUpper("leesky");
+  fmt.Println(totalLength, upperName);
+
+  repeatMe("lee", "sky", "study", "go");
+
+
   something.SayHello()
   const name string = "leesky";
-
-
 }
