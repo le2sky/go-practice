@@ -22,6 +22,10 @@
 //5. loop
 // go는 for만 사용 가능
 
+
+//6.if with a twist
+
+
 package main
 
 import (
@@ -30,6 +34,14 @@ import (
 	"strings"
 )
 
+func canIDring(age int) bool{
+  //variable expression
+  if koreanAge := age + 2; koreanAge < 18 {
+    return false
+  } 
+  return true
+
+}
 
 
 func superAdd(numbers ...int) (result int) {
@@ -71,6 +83,7 @@ func main() {
 
   repeatMe("lee", "sky", "study", "go")
 
+  fmt.Println(canIDring(16));
 
   total := superAdd(1,2,3,4,5)
   fmt.Println(total)
