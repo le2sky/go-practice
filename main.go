@@ -34,14 +34,24 @@ import (
 	"strings"
 )
 
-func canIDring(age int) bool{
+func canIDrink(age int) bool{
   //variable expression
   if koreanAge := age + 2; koreanAge < 18 {
     return false
   } 
   return true
-
 }
+
+func canIDrinkWithCase(age int) bool {
+  switch koreanAge := age + 2; koreanAge{
+    case 10:
+      return false
+    case 18:
+      return true
+  }
+  return false
+}
+
 
 
 func superAdd(numbers ...int) (result int) {
@@ -83,7 +93,7 @@ func main() {
 
   repeatMe("lee", "sky", "study", "go")
 
-  fmt.Println(canIDring(16));
+  fmt.Println(canIDrink(16));
 
   total := superAdd(1,2,3,4,5)
   fmt.Println(total)
