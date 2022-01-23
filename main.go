@@ -99,5 +99,5 @@ func main() {
   fmt.Println(total)
 
   something.SayHello()
-  const name string = "leesky"
+  const name string = "leehaneul"
 }
