@@ -27,6 +27,7 @@ package main
 
 import (
 	"fmt"
+	"main/array"
 	"main/pointer"
 	"main/something"
 	"strings"
@@ -100,4 +101,5 @@ func main() {
   const name string = "leehaneul"
 
   pointer.Pointer()
+  array.Array()
 }
