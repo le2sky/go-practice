@@ -28,6 +28,7 @@ package main
 import (
 	"fmt"
 	"main/array"
+	"main/maps"
 	"main/pointer"
 	"main/something"
 	"strings"
@@ -102,4 +103,5 @@ func main() {
 
   pointer.Pointer()
   array.Array()
+  maps.Maps()
 }
