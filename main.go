@@ -30,6 +30,7 @@ import (
 	"main/array"
 	"main/maps"
 	"main/pointer"
+  "main/structs"
 	"main/something"
 	"strings"
 )
@@ -104,4 +105,5 @@ func main() {
   pointer.Pointer()
   array.Array()
   maps.Maps()
+  structs.Structs()
 }
