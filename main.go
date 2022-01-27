@@ -18,18 +18,19 @@
 //4. function
 // 아래 주석 확인
 
-
 //5. loop
 // go는 for만 사용 가능
 
-
 //6.if with a twist
-
 
 package main
 
 import (
 	"fmt"
+	"main/array"
+	"main/maps"
+	"main/pointer"
+  "main/structs"
 	"main/something"
 	"strings"
 )
@@ -100,4 +101,9 @@ func main() {
 
   something.SayHello()
   const name string = "leehaneul"
+
+  pointer.Pointer()
+  array.Array()
+  maps.Maps()
+  structs.Structs()
 }
