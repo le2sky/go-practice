@@ -2,18 +2,18 @@ package main
 
 import (
 	"fmt"
-	"main/accounts"
+	"main/mydict"
 )
 
 func main(){
-  account := accounts.NewAccount("leesky")
-
-  account.Deposit(10)
-  err := account.Withdraw(20)
+  dictionary := mydict.Dictionary{}
+  baseWord := "hello"
+  dictionary.Add(baseWord, "First")
+  err := dictionary.Update(baseWord, "Second")
   if err != nil {
     fmt.Println(err)
-    //log.Fatalln(err) kill the program
   }
-  fmt.Println(account.Balance(), account.Owner())
-  fmt.Println(account)
+
+  word, _ := dictionary.Search(baseWord)
+  fmt.Println(word)
 }
